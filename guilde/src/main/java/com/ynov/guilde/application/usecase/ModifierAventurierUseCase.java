@@ -1,0 +1,30 @@
+package com.ynov.guilde.application.usecase;
+
+import com.ynov.guilde.application.dto.AventurierRequestDto;
+import com.ynov.guilde.application.dto.AventurierResponseDto;
+import com.ynov.guilde.application.mapper.AventurierMapper;
+import com.ynov.guilde.domain.exception.AventurierNonTrouveException;
+import com.ynov.guilde.domain.model.Aventurier;
+import com.ynov.guilde.domain.repository.AventurierRepository;
+import org.springframework.stereotype.Service;
+import java.util.UUID;
+
+@Service
+public class ModifierAventurierUseCase {
+    private final AventurierRepository repository;
+    private final AventurierMapper mapper;
+
+    public ModifierAventurierUseCase(AventurierRepository repository, AventurierMapper mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
+    }
+
+    public AventurierResponseDto executer(UUID id, AventurierRequestDto dto) {
+        Aventurier aventurier = repository.findById(id)
+                .orElseThrow(() -> new AventurierNonTrouveException(id));
+        
+        aventurier.mettreAJourProfil(dto.description(), dto.physique(), dto.mental(), dto.perception());
+        
+        return mapper.toDto(repository.save(aventurier));
+    }
+}
