@@ -15,8 +15,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Arrays;
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class ApiLogAspect {
 
     private final ApiLogMongoRepository logRepository;

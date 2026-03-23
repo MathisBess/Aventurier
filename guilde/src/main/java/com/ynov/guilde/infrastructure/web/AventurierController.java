@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/aventuriers")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AventurierController {
 
     private final CreerAventurierUseCase creerAventurierUseCase;
