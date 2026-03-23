@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
 :root {
-  --primary-color: #4f46e5; /* Un beau violet/bleu */
-  --primary-hover: #4338ca;
-  --bg-color: #f9fafb;
-  --card-bg: #ffffff;
-  --text-main: #111827;
-  --text-muted: #6b7280;
-  --border-color: #e5e7eb;
+  --primary-color: #dc2626; 
+  --primary-hover: #b91c1c;
+  --bg-color: #0c4a6e; 
+  --card-bg: #fef3c7;
+  --text-main: #451a03; 
+  --text-muted: #78350f; 
+  --border-color: #78350f; 
 
   font-family: system-ui, -apple-system, sans-serif;
   background-color: var(--bg-color);

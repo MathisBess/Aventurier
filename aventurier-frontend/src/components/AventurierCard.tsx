@@ -13,7 +13,9 @@ export const AventurierCard: React.FC<AventurierCardProps> = ({ aventurier }) =>
             <article className={styles.card}>
                 <header className={styles.header}>
                     <h2 className={styles.nom}>{aventurier.nom}</h2>
-                    <span className={styles.niveau}>Niv. {aventurier.niveau}</span>
+                    <span className={styles.niveau}>
+                        PRIME : {aventurier.niveau * 10000000} ฿
+                    </span>
                 </header>
                 
                 <div className={styles.classe}>

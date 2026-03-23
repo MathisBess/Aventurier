@@ -6,10 +6,15 @@
 
 .title {
   text-align: center;
-  color: var(--primary-color);
+  color: #fde047; 
   margin-bottom: 2rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  font-family: 'Rye', cursive; 
+  text-shadow: 3px 3px 0px #000000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
+
 
 .loader {
   text-align: center;
