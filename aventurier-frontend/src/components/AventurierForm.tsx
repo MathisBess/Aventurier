@@ -49,18 +49,20 @@ export const AventurierForm: React.FC<AventurierFormProps> = ({ onAventurierCree
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
-            <h3>Recruter un nouvel aventurier</h3>
+            <h3 style={{ fontFamily: "'Rye', cursive", fontSize: '2rem', textAlign: 'center', marginTop: 0 }}>
+                📜 Émettre un nouvel Avis de Recherche
+            </h3>
             
             {error && <div className={styles.error}>{error}</div>}
 
             <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="nom">Nom de l'aventurier *</label>
+                <label className={styles.label} htmlFor="nom">Nom du Pirate *</label>                
                 <input className={styles.input} type="text" id="nom" name="nom" required 
                        value={formData.nom} onChange={handleChange} />
             </div>
 
             <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="classe">Classe *</label>
+                <label className={styles.label} htmlFor="classe">Poste dans l'équipage *</label>
                 <select className={styles.select} id="classe" name="classe" required 
                         value={formData.classe} onChange={handleChange}>
                     <option value="guerrier">Guerrier</option>
@@ -86,7 +88,7 @@ export const AventurierForm: React.FC<AventurierFormProps> = ({ onAventurierCree
             </div>
 
             <button className={styles.button} type="submit" disabled={loading}>
-                {loading ? 'Recrutement en cours...' : 'Recruter'}
+                {loading ? '🦅 Envoi par Mouette de Presse...' : '💰 Publier la Prime'}
             </button>
         </form>
     );

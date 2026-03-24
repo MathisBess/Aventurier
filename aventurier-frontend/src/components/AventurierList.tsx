@@ -10,12 +10,11 @@ interface AventurierListProps {
 export const AventurierList: React.FC<AventurierListProps> = ({ aventuriers }) => {
     if (aventuriers.length === 0) {
         return (
-            <div className={styles.noData}>
-                La guilde est vide. Aucun aventurier n'a été trouvé.
+            <div className={styles.noData} style={{ fontSize: '1.2rem', padding: '3rem' }}>
+                🌊 Aucun pirate en vue sur cette mer. La paix règne sur Grand Line... pour l'instant.
             </div>
         );
     }
-
     return (
         <div className={styles.grid}>
             {aventuriers.map((aventurier) => (
